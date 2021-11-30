@@ -1,23 +1,30 @@
+# 다중분류 원 핫 인코더 종류별로 출력해본 예제
 import time
+import pandas as pd #
 import numpy as np
 from sklearn import datasets
 from sklearn.datasets import fetch_covtype
-from tensorflow.keras.utils import to_categorical # 값 백터수를 맞춰주는 api
+#from tensorflow.keras.utils import to_categorical # 값 백터수를 맞춰주는 api # 0값부터 연산
 from sklearn.model_selection import train_test_split
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.callbacks import EarlyStopping
-
+#from sklearn.preprocessing import OneHotEncoder # 0~7까지 출력
 #1. 데이터
 datasets = fetch_covtype()
 x = datasets.data
 y = datasets.target
-y = to_categorical(y)
-
+#y = to_categorical(y) 
+'''
+ohe = OneHotEncoder(sparse=False) # 1부터 끝값까지 출력한다.
+y = ohe.fit_transform(y.reshape(-1, 1))
+'''
+y = pd.get_dummies(y) # 0데이터값을 빼고 그 다음부터 연산
 x_train, x_test, y_train, y_test = train_test_split(x, y,
         train_size=0.8, shuffle=True, random_state=66)
 print(x_train.shape,y_train.shape)
 print(x_test.shape,y_test.shape)
+print(y[0:10])
 
 #2. 모델구성
 model = Sequential()
@@ -25,7 +32,7 @@ model.add(Dense(70, activation = 'linear', input_dim = 54))# linear= 기본값
 model.add(Dense(50, activation = 'linear'))
 model.add(Dense(30, activation = 'linear'))
 model.add(Dense(10, activation = 'linear'))
-model.add(Dense(8, activation = 'softmax'))
+model.add(Dense(7, activation = 'softmax'))
 
 #3. 컴파일, 훈련
 model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])  # metrics 몇개가 맞았는지 결과값을 보기위해 씀
