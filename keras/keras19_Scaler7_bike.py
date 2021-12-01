@@ -54,6 +54,7 @@ model.add(Dense(35, activation = 'relu'))
 model.add(Dense(20))
 model.add(Dense(10))
 model.add(Dense(1))
+model.summary()
 
 #3. 컴파일 훈련
 model.compile(loss='mse', optimizer ='adam')
@@ -85,6 +86,7 @@ sampleSubmission_file['count'] = results
 print(sampleSubmission_file[:10])
 
 sampleSubmission_file.to_csv(path + "submit6.csv", index = False)
+
 '''
 # 기본값
 loss :  1.5395662784576416
@@ -139,5 +141,31 @@ RMSE :  1.2279827870551
 '''
 '''
 # relu를 사용한 MaxAbsScaler
+loss :  1.4285707473754883
+r2스코어 :  0.2874297466616419
+RMSE :  1.1952281250290642
+'''
+'''
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #
+=================================================================
+dense (Dense)                (None, 70)                630
+_________________________________________________________________
+dense_1 (Dense)              (None, 50)                3550
+_________________________________________________________________
+dense_2 (Dense)              (None, 35)                1785
+_________________________________________________________________
+dense_3 (Dense)              (None, 20)                720
+_________________________________________________________________
+dense_4 (Dense)              (None, 10)                210
+_________________________________________________________________
+dense_5 (Dense)              (None, 1)                 11
+=================================================================
+Total params: 6,906
+Trainable params: 6,906
+Non-trainable params: 0
+_________________________________________________________________
 
+activation 형태에때라서 변경사항 없음.
 '''

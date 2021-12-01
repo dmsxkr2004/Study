@@ -14,8 +14,7 @@ model.add(Dense(3))
 model.add(Dense(4))
 model.add(Dense(2))
 model.add(Dense(1))
-# relu = y' = relu(wx + b)
-# activation = linear, sigmoid, softmax
+
 
 model.summary()
 

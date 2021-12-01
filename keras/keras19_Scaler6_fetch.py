@@ -43,9 +43,9 @@ model.add(Dense(7, activation = 'softmax'))
 #3. 컴파일, 훈련
 model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy'])  # metrics 몇개가 맞았는지 결과값을 보기위해 씀
                                                                                        
-es = EarlyStopping(monitor='val_loss', patience=20, mode = 'auto')
+es = EarlyStopping(monitor='val_loss', patience=100, mode = 'auto')
 start = time.time()
-hist = model.fit(x_train, y_train, epochs=100, batch_size = 54, validation_split = 0.2 , callbacks = [es], verbose = 1)
+hist = model.fit(x_train, y_train, epochs=1000, batch_size = 500, validation_split = 0.2 , callbacks = [es], verbose = 1)
 end = time.time()- start
 
 print("걸린시간 : ", round(end, 3), '초')
