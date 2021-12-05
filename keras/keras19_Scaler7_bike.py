@@ -54,8 +54,8 @@ model.add(Dense(35, activation = 'relu'))
 model.add(Dense(20))
 model.add(Dense(10))
 model.add(Dense(1))
-model.summary()
-
+# model.summary()
+model.save("./_save/keras25_1_save_bike.h5")
 #3. 컴파일 훈련
 model.compile(loss='mse', optimizer ='adam')
 es = EarlyStopping(monitor='val_loss', patience=50, mode = 'auto')

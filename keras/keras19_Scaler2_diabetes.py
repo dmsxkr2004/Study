@@ -33,7 +33,7 @@ model.add(Dense(40))
 model.add(Dense(25,activation=relu))
 model.add(Dense(10))
 model.add(Dense(1))
-
+model.save("./_save/keras25_1_save_diabetes.h5")
 #3. 컴파일, 훈련
 model.compile(loss='mse', optimizer='adam')
 es = EarlyStopping(monitor='val_loss', patience=50, mode = 'min', verbose = 1)

@@ -34,7 +34,7 @@ model.add(Dense(50, activation = 'linear'))
 model.add(Dense(30, activation = 'relu'))
 model.add(Dense(10, activation = 'linear'))
 model.add(Dense(1, activation = 'sigmoid'))# sigmoid 활성화 함수  0,1 로 한정해주는 함수
-
+model.save("./_save/keras25_1_save_cancer.h5")
 #3. 컴파일, 훈련
 model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy']) # binary_crossentropy 결과값이[0~1]로 한정될때 적합한 함수값 
                                                                                         # metrics 몇개가 맞았는지 결과값을 보기위해 씀

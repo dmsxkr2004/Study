@@ -37,7 +37,7 @@ model.add(Dense(40))
 model.add(Dense(25, activation = relu))
 model.add(Dense(10))
 model.add(Dense(1))
-
+model.save("./_save/keras25_1_save_boston.h5")
 #3. 컴파일, 훈련
 model.compile(loss='mse', optimizer='adam')
 es = EarlyStopping(monitor='val_loss', patience=50, mode = 'min', verbose = 1)
@@ -145,3 +145,8 @@ loss:  11.287548065185547
 r2스코어 :  0.8633751742312398
 '''
 # https://mkjjo.github.io/python/2019/01/10/scaler.html 스케일러별 차이 정의 사이트
+'''
+#보스턴 저장 모델
+loss:  9.105860710144043
+r2스코어 :  0.8897823758975654
+'''

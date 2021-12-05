@@ -33,7 +33,7 @@ model.add(Dense(50, activation = 'linear'))
 model.add(Dense(30, activation = 'relu'))
 model.add(Dense(10, activation = 'linear'))
 model.add(Dense(3, activation = 'softmax'))
-
+model.save("./_save/keras25_1_save_wine.h5")
 #3. 컴파일, 훈련
 model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy']) # categorical_crossentorpy 결과값이[0~3]이상일때 적합한 값 
                                                                                         # metrics 몇개가 맞았는지 결과값을 보기위해 씀 

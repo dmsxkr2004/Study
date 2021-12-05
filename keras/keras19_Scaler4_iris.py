@@ -39,7 +39,7 @@ model.add(Dense(40, activation = 'relu'))
 model.add(Dense(25, activation = 'linear'))
 model.add(Dense(10, activation = 'linear'))
 model.add(Dense(3, activation = 'softmax'))
-
+model.save("./_save/keras25_1_save_iris.h5")
 #3. 컴파일, 훈련
 model.compile(loss = 'categorical_crossentropy', optimizer = 'adam', metrics = ['accuracy']) # binary_crossentropy 결과값이[0~1]로 한정될때 적합한 함수값 
                                                                                         # metrics 몇개가 맞았는지 결과값을 보기위해 씀
