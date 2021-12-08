@@ -1,16 +1,18 @@
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout
+from tensorflow.keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPooling2D
 
 model = Sequential()
-model.add(Conv2D(10, kernel_size=(2,2), input_shape = (10, 10, 1))) # 9,9,10
+model.add(Conv2D(10, kernel_size=(2,2), strides = 1, # strides = 1 은 디폴트값 2를하면 2칸씩 건너뛰어서 자름
+                 padding = 'same', input_shape = (10, 10, 1)))
+model.add(MaxPooling2D())
 #input_shape = (a, b, c)ㅡ> a - kernel_size + 1
-model.add(Conv2D(5, (3,3), activation = 'relu')) # 7,7,5
-model.add(Conv2D(7, (2,2), activation = 'relu')) # 6,6,7
-model.add(Flatten())
-model.add(Dense(64))
-model.add(Dropout(0.2))
-model.add(Dense(16))
-model.add(Dense(5, activation = 'softmax'))
+# model.add(Conv2D(5, (3,3), activation = 'relu')) # 7,7,5
+model.add(Conv2D(5, (2,2), activation = 'relu')) # 6,6,7
+# model.add(Flatten())
+# model.add(Dense(64))
+# model.add(Dropout(0.2))
+# model.add(Dense(16))
+# model.add(Dense(5, activation = 'softmax'))
 model.summary()
 
 # 반장, 이한, 예람, 명재, 모나리자 ->
@@ -41,7 +43,7 @@ Convolution(합성곱)
 필터(Filter)
 커널(Kernel)
 스트라이드(Strid)
-패딩(Padding)
+패딩(Padding) : 5x5사이즈의 이미지같은것을 Conv2D 했을때 4x4 로 되는것을 5x5로 나오게끔 해주는 기능
 피처 맵(Feature Map)
 액티베이션 맵(Activation Map)
 풀링(Pooling) 레이어
