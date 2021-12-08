@@ -48,3 +48,8 @@ Convolution(합성곱)
 액티베이션 맵(Activation Map)
 풀링(Pooling) 레이어
 '''
+'''
+Dense output의 정식 명칭은?? : units
+N-D tensor with shape: (batch_size, ..., units). For instance, 
+for a 2D input with shape (batch_size, input_dim), the output would have shape (batch_size, units).
+'''
