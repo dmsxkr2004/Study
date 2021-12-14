@@ -37,4 +37,15 @@ print(result)
 #LSTM params = 4 x (파라미터 아웃값 * (파라미터 아웃값 + 디멘션 값 + 1(바이어스)))
 #              4         50        x           50     +     1     +     1
 
+'''
+Hyperbolic Tangent(tanh) 함수 정리
+
+Hyperbolic Tangent 함수는 확장 된 시그모이드 함수입니다.
+tanh와 Sigmoid의 차이점은 Sigmoid의 출력 범위가 0에서 1사이인 반면 
+tanh의 출력 범위는 -1에서 1사이라는 점입니다.
+Sigmoid와 비교하여 tanh와는 출력 범위가 더 넓고 경사면이 큰 범위가 더 크기 때문에
+더 빠르게 수렴하여 학습하는 특성이 있습니다.
+※기울기 소실(Vanishing gradient problem) : 미분함수에 대하여, 값이 일정 이상 커지는 경우
+미분값이 소실되는 현상
+'''
 
