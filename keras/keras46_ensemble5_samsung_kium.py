@@ -133,3 +133,12 @@ print('키움예측값 : ', y2_pred[-1])
 
 
 # model.save('../_data/exam/samsung/jechul_exam_{}.h5.format(y1_pred[-1])')
+'''
+Epoch 00241: val_loss did not improve from 3376.33984
+Epoch 00241: early stopping
+걸린시간 :  10.81 초
+5/5 [==============================] - 0s 997us/step - loss: 2592.3423 - dense_11_loss: 1455.4531 - dense_15_loss: 1136.8890
+loss : [2592.34228515625, 1455.453125, 1136.8890380859375]
+삼성예측값 :  [76574.29]
+키움예측값 :  [108301.32]
+'''
