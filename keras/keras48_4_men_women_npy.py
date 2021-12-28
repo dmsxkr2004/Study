@@ -76,3 +76,13 @@ elif(classes[0][0]>0.5):
     print(f"당신은 {round(women,2)} % 확률로 women 입니다")
 else:
     print("ERROR")
+'''
+Epoch 00023: early stopping
+31/31 [==============================] - 0s 3ms/step - loss: 0.6590 - accuracy: 0.6341
+loss :  0.6590364575386047
+accuracy :  0.6340726017951965
+accuracy: 63.41%
+-- Predict --
+[[0.5571371]]
+당신은 55.71 % 확률로 women 입니다
+'''
