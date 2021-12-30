@@ -48,7 +48,7 @@ es = EarlyStopping(monitor='val_loss',patience=20, mode='auto', verbose=1, resto
 model.fit(x_train, y_train, epochs=100, batch_size=5, verbose=1, validation_split=0.2, callbacks=[es])
 
 
-
+ 
 # 4. 평가, 예측
 # Evaluate
 loss = model.evaluate(x_test, y_test)
