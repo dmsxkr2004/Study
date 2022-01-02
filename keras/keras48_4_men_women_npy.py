@@ -23,7 +23,7 @@ print(x_train.shape) # (2317, 50, 50, 3)
 print(x_test.shape) # (992, 50, 50, 3)
 print(y_train.shape) # (2317, 2)
 print(y_test.shape) # (992, 2)
-
+ 
 #2. 모델구성
 model = Sequential()
 model.add(Conv2D(32, kernel_size=(2,2), input_shape=(50, 50, 3)))
