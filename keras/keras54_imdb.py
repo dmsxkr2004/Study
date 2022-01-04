@@ -10,3 +10,4 @@ print(y_train.shape, y_test.shape)# (25000,) (25000,)
 print(np.unique(y_train))
 
 print(x_train[0], y_train[0])
+ 
