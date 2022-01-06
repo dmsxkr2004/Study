@@ -17,7 +17,7 @@ print(x_train.shape, y_train.shape) # (8982,) (8982,)
 
 print(len(x_train[0]), len(x_train[1])) # 87, 56
 print(type(x_train[0]), type(x_train[1]))# <class 'list'> <class 'list'>
-
+ 
 # print("뉴스기사의 최대길이 : ", max(len(x_train)))
 print("뉴스기사의 최대길이 : ", max(len(i) for i in x_train)) #  2376
 print("뉴스기사의 평균길이 : ", sum(map(len, x_train))/len(x_train))
