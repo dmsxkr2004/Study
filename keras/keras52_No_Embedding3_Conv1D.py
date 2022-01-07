@@ -68,4 +68,4 @@ model.fit(pad_x, labels, epochs=100, batch_size=32)
 
 #4. 평가, 예측
 acc = model.evaluate(pad_x, labels)[1]
-print('acc : ', acc)
+print('acc : ', acc) 
