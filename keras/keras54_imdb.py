@@ -12,3 +12,4 @@ print(np.unique(y_train))
 print(x_train[0], y_train[0])
  
  
+ 
