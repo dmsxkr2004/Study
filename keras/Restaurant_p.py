@@ -63,6 +63,6 @@ def find_simi_place(df, sorted_ind, place_name, top_n=10):
     return df.iloc[similar_indexes]
 
 
-# 상도국수를 포함해 5개 업체를 뽑아봅시다.
+# 마녀주방을 포함해 5개 업체를 뽑아봅시다.
 
 print(find_simi_place(df, place_simi_co_sorted_ind, '마녀주방', 5))
