@@ -67,3 +67,4 @@ model.add(Dense(46, activation = 'softmax'))
 #     index_to_word[index] = token
 
 # print(' '.join([index_to_word[index] for index in x_train[0]]))
+ 
