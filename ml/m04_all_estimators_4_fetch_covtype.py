@@ -33,41 +33,38 @@ for (name, algorithm) in allAlgorithms:
         acc = accuracy_score(y_test, y_predict)
         print(name, '의 정답률 : ', acc)
     except:
-        continue
+        # continue
+        print(name, '은 에러 터진놈!!!')
 
 '''
-AdaBoostClassifier 의 정답률 :  0.8888888888888888
-BaggingClassifier 의 정답률 :  0.9722222222222222
-BernoulliNB 의 정답률 :  0.4166666666666667
-CalibratedClassifierCV 의 정답률 :  0.9722222222222222
-CategoricalNB 의 정답률 :  0.5
-ComplementNB 의 정답률 :  0.8611111111111112
-DecisionTreeClassifier 의 정답률 :  0.9722222222222222
-DummyClassifier 의 정답률 :  0.4166666666666667
-ExtraTreeClassifier 의 정답률 :  0.9166666666666666
-ExtraTreesClassifier 의 정답률 :  1.0
-GaussianNB 의 정답률 :  1.0
-GaussianProcessClassifier 의 정답률 :  1.0
-GradientBoostingClassifier 의 정답률 :  0.9722222222222222
-HistGradientBoostingClassifier 의 정답률 :  0.9722222222222222
-KNeighborsClassifier 의 정답률 :  1.0
-LabelPropagation 의 정답률 :  1.0
-LabelSpreading 의 정답률 :  1.0
-LinearDiscriminantAnalysis 의 정답률 :  1.0
-LinearSVC 의 정답률 :  0.9722222222222222
-LogisticRegression 의 정답률 :  1.0
-LogisticRegressionCV 의 정답률 :  0.9722222222222222
-MLPClassifier 의 정답률 :  0.9722222222222222
-MultinomialNB 의 정답률 :  0.9444444444444444
-NearestCentroid 의 정답률 :  1.0
-NuSVC 의 정답률 :  1.0
-PassiveAggressiveClassifier 의 정답률 :  0.9722222222222222
-Perceptron 의 정답률 :  0.9722222222222222
-QuadraticDiscriminantAnalysis 의 정답률 :  0.9722222222222222
-RadiusNeighborsClassifier 의 정답률 :  0.9722222222222222
-RandomForestClassifier 의 정답률 :  1.0
-RidgeClassifier 의 정답률 :  1.0
-RidgeClassifierCV 의 정답률 :  0.9722222222222222
-SGDClassifier 의 정답률 :  0.9722222222222222
-SVC 의 정답률 :  1.0
+AdaBoostClassifier 의 정답률 :  0.5028613719095032
+BaggingClassifier 의 정답률 :  0.9626515666549056
+BernoulliNB 의 정답률 :  0.631833945767321
+CalibratedClassifierCV 의 정답률 :  0.7122621619063191
+CategoricalNB 의 정답률 :  0.6321437484402296
+ComplementNB 의 정답률 :  0.6225742880992745
+DecisionTreeClassifier 의 정답률 :  0.9396315069318348
+DummyClassifier 의 정답률 :  0.48625250638968015
+ExtraTreeClassifier 의 정답률 :  0.8680240613409292
+ExtraTreesClassifier 의 정답률 :  0.9544331901930243
+GaussianNB 의 정답률 :  0.09079800005163378
+GradientBoostingClassifier 의 정답률 :  0.773499823584589
+HistGradientBoostingClassifier 의 정답률 :  0.7815546930802131
+KNeighborsClassifier 의 정답률 :  0.9376263951877318
+LinearDiscriminantAnalysis 의 정답률 :  0.6797931206595355
+LinearSVC 의 정답률 :  0.7124170632427734
+LogisticRegression 의 정답률 :  0.7194220459024294
+LogisticRegressionCV 의 정답률 :  0.7246370575630577
+MLPClassifier 의 정답률 :  0.8393328915776701
+MultinomialNB 의 정답률 :  0.6410247583969433
+NearestCentroid 의 정답률 :  0.38585062347787924
+PassiveAggressiveClassifier 의 정답률 :  0.5843308692546664
+Perceptron 의 정답률 :  0.6010257910725196
+QuadraticDiscriminantAnalysis 의 정답률 :  0.08459334096365842
+RadiusNeighborsClassifier 의 정답률 :  0.6515064154970182
+RandomForestClassifier 의 정답률 :  0.9556465839952497
+RidgeClassifier 의 정답률 :  0.7008510967875184
+RidgeClassifierCV 의 정답률 :  0.7008424911577154
+SGDClassifier 의 정답률 :  0.7109282892868515
+SVC 의 정답률 :  0.773955921964149
 '''

@@ -33,7 +33,8 @@ for (name, algorithm) in allAlgorithms:
         acc = accuracy_score(y_test, y_predict)
         print(name, '의 정답률 : ', acc)
     except:
-        continue
+        # continue
+        print(name, '은 에러 터진놈!!!')
 
 '''
 AdaBoostClassifier 의 정답률 :  0.8888888888888888
