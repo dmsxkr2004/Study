@@ -9,7 +9,7 @@ import tensorflow as tf
 import numpy as np
 import pandas as pd
 from sklearn.metrics import r2_score, mean_squared_error #mse
-from sklearn.model_selection import train_test_split,KFold,cross_val_score, GridSearchCV
+from sklearn.model_selection import train_test_split,KFold,cross_val_score, GridSearchCV,RandomizedSearchCV
 from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, LSTM, Conv1D, Flatten
 import matplotlib.pyplot as plt
@@ -53,8 +53,8 @@ parameters = [
 ]
 
 # 파라미터 조합으로 2개이상 엮을것
-model = GridSearchCV(RandomForestRegressor(), parameters, cv=kfold, verbose=1, # CV = cross validation
-                     refit = True)
+model = RandomizedSearchCV(RandomForestRegressor(), parameters, cv=kfold, verbose=1, # CV = cross validation
+                     refit = True, random_state=66, n_iter=20)
 
 #3. 훈련
 import time
@@ -81,12 +81,12 @@ print("최적 튠 r2_score : ",r2_score(y_test,y_pred_best)) # 최적 튠 ACC : 
 
 print("걸린시간 : ", end - start)
 '''
-Fitting 5 folds for each of 48 candidates, totalling 240 fits
-최적의 매개변수 :  RandomForestRegressor(max_depth=10, n_estimators=400)
-최적의 파라미터 :  {'max_depth': 10, 'n_estimators': 400}
-best_score_ :  0.34609301435436635
-model.score :  0.3531985313165622
-r2_score :  0.3531985313165622
-최적 튠 r2_score :  0.3531985313165622
-걸린시간 :  181.9608118534088
+Fitting 5 folds for each of 20 candidates, totalling 100 fits
+최적의 매개변수 :  RandomForestRegressor(max_depth=10, n_estimators=200)
+최적의 파라미터 :  {'n_estimators': 200, 'max_depth': 10}
+best_score_ :  0.34527667525192063
+model.score :  0.3537987691419532
+r2_score :  0.3537987691419532
+최적 튠 r2_score :  0.3537987691419532
+걸린시간 :  69.16246438026428
 '''
