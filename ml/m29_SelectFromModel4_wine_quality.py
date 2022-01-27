@@ -32,7 +32,7 @@ print(x.shape,y.shape) # (4898, 11) (4898,)
 # y = get_dummies(y)
 # print(y.shape)
 x_train, x_test, y_train, y_test = train_test_split(x, y, train_size = 0.8, shuffle = True, random_state = 66, stratify=y)
-
+ 
 scaler = PowerTransformer()
 scaler.fit(x_train)
 x_train = scaler.transform(x_train)
