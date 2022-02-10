@@ -49,7 +49,7 @@ print(model1.score(x_test, y_test))
 print(model2.score(x_test, y_test))
 print(model3.score(x_test, y_test))
 print(model4.score(x_test, y_test))
-
+ 
 '''
 결과 비교
 1. DecisionTree 
