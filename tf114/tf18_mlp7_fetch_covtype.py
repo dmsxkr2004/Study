@@ -51,7 +51,7 @@ with tf.compat.v1.Session() as sess:
     predict = sess.run(tf.argmax(sess.run(hypothesis, feed_dict={x:x_test}), 1))
     acc = accuracy_score(y_acc_test, predict)
     print("accuracy_score : ", acc)
-
+ 
 '''
 acc :  0.6346842
 accuracy_score :  0.6346842298512942
