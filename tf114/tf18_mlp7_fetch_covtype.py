@@ -56,3 +56,4 @@ with tf.compat.v1.Session() as sess:
 acc :  0.6346842
 accuracy_score :  0.6346842298512942
 '''
+ 
