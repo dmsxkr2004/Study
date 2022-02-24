@@ -41,4 +41,4 @@ print("모델명 : ", model)
 print("전체 가중치 갯수 : ", len(model.weights))
 print("훈련 가능 가중치 갯수 : ", len(model.trainable_weights))
 
-  
+   
