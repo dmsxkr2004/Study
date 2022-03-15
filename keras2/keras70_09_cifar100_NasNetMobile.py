@@ -31,7 +31,7 @@ train_datagen = ImageDataGenerator(
 augment_size = 50000
 randidx = np.random.randint(x_train.shape[0], size=augment_size) # randint - 랜덤한 정수값을 뽑는다
 print(x_train.shape[0]) # 50000
-
+ 
 print(randidx) # [32882 21036 43516 ... 48177 49866 51437]
 print(np.min(randidx), np.max(randidx)) # 0 ~ 59996
 
