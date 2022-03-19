@@ -153,7 +153,7 @@ for i, (train_idx, val_idx) in enumerate(skf.split(train_x, train.target)):
     cnn_pred += fold_pred
 
 np.mean(cnn_acc)
-
+ 
 submission['target'] = np.argmax(cnn_pred, axis = 1)
 submission.to_csv('D:/Study/hackarthon/hands/submission.csv', index = False)
 submission.target.value_counts()
