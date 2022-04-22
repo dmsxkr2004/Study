@@ -71,6 +71,6 @@ for i, ax in enumerate([ax6, ax7, ax8, ax9, ax10]):
     ax.grid(False)
     ax.set_xticks([])
     ax.set_yticks([])
-
+ 
 plt.tight_layout()    
 plt.show()
